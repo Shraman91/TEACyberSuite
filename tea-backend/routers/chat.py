@@ -46,7 +46,6 @@ def join_room_by_key(body: JoinRoomByKey, user: dict = Depends(get_current_user)
 
 @router.get("/rooms")
 def list_rooms(user: dict = Depends(get_current_user)):
-    # In a full backend-driven flow, you would query Firebase Admin here
     return {"rooms": []}
 
 @router.post("/rooms/{room_id}/messages")
